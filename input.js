@@ -11,6 +11,11 @@ window.onload = function(){
    // document.getElementById('number-guess').addEventListener("click" , initgame);
 }
 
+
+
+function initGame(){
+    
+}
 function playGame(){
 
     var numbergame= document.getElementById('number-guess').value;
