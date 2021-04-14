@@ -7,14 +7,25 @@ let guesses = [];
 
 
 window.onload = function(){
+  initGame()
     document.getElementById('number-submit').addEventListener("click" , playGame);
-   // document.getElementById('number-guess').addEventListener("click" , initgame);
+    document.getElementById('restart-game').addEventListener("click" , initGame);
 }
 
 
 
 function initGame(){
+  correctNumber = getRandomNumber();
+  guesses = [];
+  displayHistory()
+  resetResultContent()
+
     
+}
+
+function resetResultContent(){
+  document.getElementById("result").innerHTML = "";
+
 }
 function playGame(){
 
@@ -23,7 +34,7 @@ function playGame(){
     displayResult(numbergame)
     saveGuessHistory(numbergame)
     displayHistory()
-
+    //initGame();
 
 }
 
@@ -101,14 +112,14 @@ function saveGuessHistory(guess){
 }
 
 function displayHistory() {
-    let index = guesses.length-1 ;
+    let index = 0 ;
     let list = "<ul class='list-group'>"
-    while(index > 0){
+    while(index < guesses.length-1){
       list += 
         "<li class='list-group-item'>" + 
         "You guessed " + guesses[index] +
         "</li>";
-      index-=1;
+      index+=1;
     }
     list += '</ul>';
     document.getElementById("history").innerHTML = list;
