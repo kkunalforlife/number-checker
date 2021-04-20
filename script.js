@@ -11,6 +11,14 @@ window.onload = function() {
     initGame()
     document.getElementById("number-submit").addEventListener("click", playGame);
     document.getElementById("restart-game").addEventListener("click", initGame)
+    domEvents();
+
+}
+
+function domEvents(){
+  for (let i ; i <document.body.children.length ; i++){
+    alert = prompt="the messgae in the body is "+document.body.children;
+  }
 }
 
 function playGame(){
