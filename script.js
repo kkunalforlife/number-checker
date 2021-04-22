@@ -66,7 +66,7 @@ function displayHistory() {
       "</li>";
     index-=1
   }
-  list += '</ul>'
+  list += "</ul>"
   document.getElementById("history").innerHTML = list;
 }
 
