@@ -17,7 +17,7 @@ window.onload = function() {
 
 function domEvents(){
   for (let i ; i <document.body.children.length ; i++){
-    alert = prompt="the messgae in the body is "+document.body.children;
+    alert = prompt="the messgae in the body is "+document.body.children.length;
   }
 }
 
